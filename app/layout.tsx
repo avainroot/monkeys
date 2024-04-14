@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import StoreProvider from "./StoreProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <main className="flex lg:p-[55px] justify-center p-[14px]">
+            <section className="w-full max-w-[1442px]">{children}</section>
+          </main>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }

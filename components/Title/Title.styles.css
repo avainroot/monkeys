@@ -1,0 +1,6 @@
+.title {
+  @apply bg-[#777777] rounded-[15px] items-center flex justify-center lg:p-[18px] p-[6px] lg:mb-[105px] mb-[97px];
+  h1 {
+    @apply text-[40px] text-center lg:text-[96px] leading-none text-secondary;
+  }
+}
